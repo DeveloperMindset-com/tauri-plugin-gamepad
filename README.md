@@ -6,6 +6,11 @@ A plugin for [Tauri](https://github.com/tauri-apps/tauri) that provides a polyfi
 
 It's built on top of [gilrs](https://crates.io/crates/gilrs) library.
 
+## Packages
+
+- `tauri-plugin-gamepad` on [crates](https://crates.io/crates/tauri-plugin-gamepad)
+- `tauri-plugin-gamepad-api` on [npm](https://www.npmjs.com/package/tauri-plugin-gamepad-api)
+
 ## Supported platforms (from `gilrs`)
 
 |                  | Input | Hotplugging | Force feedback |
