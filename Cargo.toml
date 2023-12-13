@@ -1,0 +1,18 @@
+[package]
+name = "tauri-plugin-gamepad"
+version = "0.0.0"
+authors = [ "You" ]
+description = ""
+edition = "2021"
+rust-version = "1.60"
+exclude = ["/examples", "/webview-dist", "/webview-src", "node_modules"]
+
+[dependencies]
+tauri = { version = "1.5.2" }
+serde = "1.0"
+thiserror = "1.0"
+gilrs = {version = "0.10.4", features = ["serde-serialize"]}
+gilrs-core = { git = "https://gitlab.com/gilrs-project/gilrs.git", branch = "master" }
+serde_json = "1.0"
+enum-iterator = "1.4.1"
+uuid = "*"
