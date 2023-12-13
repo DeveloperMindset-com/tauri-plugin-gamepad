@@ -11,7 +11,7 @@ license-file = "LICENSE"
 homepage = "https://developermindset.com/tauri-plugin-gamepad/"
 repository = "https://github.com/eugenehp/tauri-plugin-gamepad"
 readme = "README.md"
-keywords = ["polyfill", "api", "rust", "gamepad", "gilrs", "tauri", "joystick"]
+keywords = ["polyfill", "gamepad", "gilrs", "tauri", "joystick"]
 categories = ["api-bindings","web-programming","simulation","os","game-development"]
 
 [dependencies]
