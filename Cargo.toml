@@ -6,7 +6,6 @@ description = "A plugin for Tauri that provides a polyfill for Gamepad Web API t
 edition = "2021"
 rust-version = "1.60"
 exclude = ["/examples", "/webview-dist", "/webview-src", "node_modules"]
-license = "MIT"
 license-file = "LICENSE"
 homepage = "https://developermindset.com/tauri-plugin-gamepad/"
 repository = "https://github.com/eugenehp/tauri-plugin-gamepad"
