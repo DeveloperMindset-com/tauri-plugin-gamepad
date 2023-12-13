@@ -74,7 +74,7 @@ async fn execute<R: Runtime>(app: AppHandle<R>, _window: Window<R>) {
         while let Some(Event { id, event, time }) = gilrs.next_event() {
             let gamepad = gilrs.gamepad(id);
             let payload = gamepad_to_json(gamepad, event, time);
-            app.emit_all("event", payload).unwrap();
+            app.emit("event", payload).unwrap();
         }
     }
 }

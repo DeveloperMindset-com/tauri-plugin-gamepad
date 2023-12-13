@@ -14,7 +14,7 @@ keywords = ["polyfill", "gamepad", "gilrs", "tauri", "joystick"]
 categories = ["api-bindings","web-programming","simulation","os","game-development"]
 
 [dependencies]
-tauri = { version = "1.5.2" }
+tauri = { version = "2.0.0-alpha" }
 serde = "1.0"
 thiserror = "1.0"
 gilrs = {version = "0.10.4", features = ["serde-serialize"]}
