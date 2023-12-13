@@ -1,11 +1,13 @@
 {
   "name": "tauri-plugin-gamepad-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Eugene Hauptmann",
+  "homepage": "https://developermindset.com/tauri-plugin-gamepad/",
   "description": "A plugin for Tauri that provides a polyfill for Gamepad Web API that works on most common platforms.",
   "browser": "webview-dist/index.js",
   "main": "webview-dist/index.js",
   "types": "webview-dist/index.d.ts",
+  "keywords": ["polyfill", "api", "rust", "gamepad", "gilrs", "tauri", "joystick"],
   "scripts": {
     "build": "rollup -c ./webview-src/rollup.config.js",
     "watch": "rollup -c ./webview-src/rollup.config.js --watch",

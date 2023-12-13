@@ -2,7 +2,7 @@
 
 A plugin for [Tauri](https://github.com/tauri-apps/tauri) that provides a polyfill for [Gamepad Web API](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API) that works on most common platforms.
 
-![demo](./docs/demo.png)
+![demo](https://github.com/eugenehp/tauri-plugin-gamepad/raw/master/docs/demo.png)
 
 It's built on top of [gilrs](https://crates.io/crates/gilrs) library.
 
