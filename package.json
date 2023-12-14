@@ -4,6 +4,7 @@
   "author": "Eugene Hauptmann",
   "homepage": "https://developermindset.com/tauri-plugin-gamepad/",
   "description": "A plugin for Tauri that provides a polyfill for Gamepad Web API that works on most common platforms.",
+  "repository": {"url": "https://github.com/eugenehp/tauri-plugin-gamepad"},
   "browser": "webview-dist/index.js",
   "main": "webview-dist/index.js",
   "types": "webview-dist/index.d.ts",
