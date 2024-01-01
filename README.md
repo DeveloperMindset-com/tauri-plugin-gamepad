@@ -12,7 +12,12 @@ This plugin supports Tauri `1.x`, for `2.x` support check [v2 branch](https://gi
 
 By default WebKit does not support all the joysticks and gamepads, especially on Safari (macOS and iOS). It does support a bit more in Chrome's version of WebKit, but that's not the one used by Tauri.
 
-Therefor this plugin was created to bridge this gap and provide same access via homogenous Gamepad API that's already available in most browsers.
+Therefore this plugin was created to bridge this gap and provide same access via homogenous Gamepad API that's already available in most browsers.
+
+## Tutorial
+
+[YouTube](https://www.youtube.com/embed/EuGDSnfuGjU?si=0LLJXYvER_acBOWg)
+[![youtube tutorial](https://img.youtube.com/vi/EuGDSnfuGjU/maxresdefault.jpg)](https://www.youtube.com/embed/EuGDSnfuGjU?si=0LLJXYvER_acBOWg)
 
 
 ## Usage
