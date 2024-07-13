@@ -1,6 +1,6 @@
 [package]
 name = "tauri-plugin-gamepad"
-version = "0.0.2"
+version = "0.0.3"
 authors = [ "Eugene Hauptmann" ]
 description = "A plugin for Tauri that provides a polyfill for Gamepad Web API that works on most common platforms."
 edition = "2021"
@@ -8,13 +8,13 @@ rust-version = "1.60"
 exclude = ["/examples", "/webview-dist", "/webview-src", "node_modules"]
 license-file = "LICENSE"
 homepage = "https://developermindset.com/tauri-plugin-gamepad/"
-repository = "https://github.com/eugenehp/tauri-plugin-gamepad"
+repository = "https://github.com/DeveloperMindset-com/tauri-plugin-gamepad"
 readme = "README.md"
 keywords = ["polyfill", "gamepad", "gilrs", "tauri", "joystick"]
-categories = ["api-bindings","web-programming","simulation","os","game-development"]
+categories = ["api-bindings", "web-programming", "simulation", "os", "game-development"]
 
 [dependencies]
-tauri = { version = "2.0.0-alpha" }
+tauri = { version = "2.0.0-beta" }
 serde = "1.0"
 thiserror = "1.0"
 gilrs = {version = "0.10.4", features = ["serde-serialize"]}
