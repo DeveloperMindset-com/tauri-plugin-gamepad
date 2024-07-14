@@ -6,13 +6,18 @@ A plugin for [Tauri](https://github.com/tauri-apps/tauri) that provides a polyfi
 
 It's built on top of [gilrs](https://crates.io/crates/gilrs) library.
 
-This plugin supports Tauri `2.x`  beta.
+This plugin supports Tauri `2.x` beta. For v1 version check [v1 branch](https://github.com/eugenehp/tauri-plugin-gamepad/tree/v1)
 
 ## Why
 
 By default WebKit does not support all the joysticks and gamepads, especially on Safari (macOS and iOS). It does support a bit more in Chrome's version of WebKit, but that's not the one used by Tauri.
 
-Therefor this plugin was created to bridge this gap and provide same access via homogenous Gamepad API that's already available in most browsers.
+Therefore this plugin was created to bridge this gap and provide same access via homogenous Gamepad API that's already available in most browsers.
+
+## Tutorial
+
+[YouTube](https://www.youtube.com/embed/EuGDSnfuGjU?si=0LLJXYvER_acBOWg)
+[![youtube tutorial](https://img.youtube.com/vi/EuGDSnfuGjU/maxresdefault.jpg)](https://www.youtube.com/embed/EuGDSnfuGjU?si=0LLJXYvER_acBOWg)
 
 
 ## Usage
