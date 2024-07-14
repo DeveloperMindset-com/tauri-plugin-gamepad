@@ -6,7 +6,7 @@ A plugin for [Tauri](https://github.com/tauri-apps/tauri) that provides a polyfi
 
 It's built on top of [gilrs](https://crates.io/crates/gilrs) library.
 
-This plugin supports Tauri `1.x`, let me know if you need `2.x` support added.
+This plugin supports Tauri `2.x`  beta.
 
 ## Why
 
@@ -59,4 +59,4 @@ When contributing to this repository, please first discuss the change you wish t
 ## License
 [MIT](./LICENSE)
 
-Copyright (c) 2023 Eugene Hauptmann
+Copyright (c) 2023-2024 Eugene Hauptmann
