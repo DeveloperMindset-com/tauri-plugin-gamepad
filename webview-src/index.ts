@@ -1,5 +1,7 @@
+//@ts-ignore
 import { listen } from "@tauri-apps/api/event";
-import { invoke } from "@tauri-apps/api/tauri";
+//@ts-ignore
+import { invoke } from "@tauri-apps/api/primitives";
 
 export type PluginEvent = {
   id: number;
@@ -31,7 +33,8 @@ const start = () => {
   invoke("plugin:gamepad|execute");
   navigator.getGamepads = getGamepads;
 
-  unlisten = listen<PluginEvent>("event", ({ payload }) => {
+  unlisten = listen<PluginEvent>("event", (event: any) => {
+    const { payload } = event;
     let gamepad = eventToGamepad(payload);
     let added = false;
     gamepads = gamepads.map((g) => {
