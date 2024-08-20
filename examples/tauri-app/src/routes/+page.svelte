@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import 'tauri-plugin-gamepad-api'
 
   let gamepads:any[] = []
 
@@ -10,13 +9,11 @@
     }, 100);
   })
 
-  window.ongamepadconnected = (event) => {
-    console.log("ongamepadconnected", event);
-  }
+  window.ongamepadconnected = (e) =>
+    console.log("ongamepadconnected", e);
   
-  window.ongamepaddisconnected = (event) => {
-    console.log("ongamepaddisconnected", event);
-  }
+  window.ongamepaddisconnected = (e) =>
+    console.log("ongamepaddisconnected", e);
 </script>
 
 <main class="container">

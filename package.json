@@ -1,6 +1,6 @@
 {
   "name": "tauri-plugin-gamepad-api",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Eugene Hauptmann",
   "homepage": "https://developermindset.com/tauri-plugin-gamepad/",
   "repository": {"url": "https://github.com/eugenehp/tauri-plugin-gamepad"},
