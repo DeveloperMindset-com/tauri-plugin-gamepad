@@ -82,10 +82,8 @@ async fn execute<R: Runtime>(app: AppHandle<R>, _window: Window<R>) {
 
 /// Initializes the plugin.
 pub fn init<R: Runtime>() -> TauriPlugin<R> {
-    let js_init_script = "console.log('js_init_script');".to_string();
 
-    Builder::new("tauri-plugin-gamepad")
-        .js_init_script(js_init_script)
+    Builder::new("gamepad")
         .invoke_handler(tauri::generate_handler![execute])
         .build()
 }
