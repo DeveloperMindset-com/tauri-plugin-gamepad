@@ -76,6 +76,14 @@ Make sure to include proper permissions to enable the plugin to share events wit
 }
 ```
 
+## Tauri versions support
+
+| Tauri version |  git  |
+|---------------|-------|
+| 1.x           | [0.0.2](https://github.com/DeveloperMindset-com/tauri-plugin-gamepad/tree/v1)    |
+| 2.0.0-beta    | [0.0.3](https://github.com/DeveloperMindset-com/tauri-plugin-gamepad/releases/tag/0.0.3) |
+| 2.0.0-rc      | [0.0.4](https://github.com/DeveloperMindset-com/tauri-plugin-gamepad/releases/tag/0.0.4) |
+
 ## Contributing
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
 
