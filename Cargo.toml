@@ -1,6 +1,6 @@
 [package]
 name = "tauri-plugin-gamepad"
-version = "0.0.3"
+version = "0.0.4"
 authors = [ "Eugene Hauptmann" ]
 description = "A plugin for Tauri that provides a polyfill for Gamepad Web API that works on most common platforms."
 edition = "2021"
@@ -14,10 +14,10 @@ keywords = ["polyfill", "gamepad", "gilrs", "tauri", "joystick"]
 categories = ["api-bindings", "web-programming", "simulation", "os", "game-development"]
 
 [dependencies]
-tauri = { version = "2.0.0-beta" }
+tauri = { version = "2.0.0-rc" }
 serde = "1.0"
 thiserror = "1.0"
 gilrs = {version = "0.10.4", features = ["serde-serialize"]}
 serde_json = "1.0"
-enum-iterator = "1.4.1"
+enum-iterator = "2.1.0"
 uuid = "1.6.1"
