@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "skipLibCheck": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "noEmit": true,
+    "declaration": true,
+    "declarationDir": "../dist-js",
+    "rootDir": "./"
+  },
+  "include": ["guest-js/*.ts"],
+  "exclude": ["./rollup.config.js", "dist-js", "node_modules", "test/types"]
+}

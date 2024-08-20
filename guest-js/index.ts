@@ -1,7 +1,5 @@
-//@ts-ignore
 import { listen } from "@tauri-apps/api/event";
-//@ts-ignore
-import { invoke } from "@tauri-apps/api/primitives";
+import { invoke } from "@tauri-apps/api/core";
 
 export type PluginEvent = {
   id: number;
@@ -79,7 +77,7 @@ const eventToGamepad = (event: PluginEvent): Gamepad => {
     mapping,
     hapticActuators: [],
     vibrationActuator: null,
-  } as Gamepad;
+  } as any as Gamepad;
 };
 
 export const execute = async (cb: Callback) => {

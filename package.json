@@ -6,9 +6,21 @@
   "repository": {"url": "https://github.com/eugenehp/tauri-plugin-gamepad"},
   "description": "A plugin for Tauri that provides a polyfill for Gamepad Web API that works on most common platforms.",
   "browser": "webview-dist/index.js",
-  "main": "webview-dist/index.js",
-  "types": "webview-dist/index.d.ts",
   "type": "module",
+  "types": "./dist-js/index.d.ts",
+  "main": "./dist-js/index.cjs",
+  "module": "./dist-js/index.js",
+  "exports": {
+    "types": "./dist-js/index.d.ts",
+    "import": "./dist-js/index.js",
+    "require": "./dist-js/index.cjs"
+  },
+  "files": [
+    "dist-js",
+    "!dist-js/**/*.map",
+    "README.md",
+    "LICENSE"
+  ],
   "keywords": [
     "polyfill",
     "api",
@@ -19,20 +31,20 @@
     "joystick"
   ],
   "scripts": {
-    "build": "rollup -c ./webview-src/rollup.config.js",
-    "watch": "rollup -c ./webview-src/rollup.config.js --watch",
+    "build": "rollup -c",
+    "watch": "rollup -c --watch",
     "prepublishOnly": "npm run build",
     "pretest": "npm run build"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "15.2.3",
-    "@rollup/plugin-typescript": "11.1.5",
-    "rollup": "^4.9.0",
+    "@rollup/plugin-typescript": "11.1.6",
+    "rollup": "^4.21.0",
     "@rollup/plugin-terser": "0.4.4",
-    "typescript": "4.7.3"
+    "typescript": "5.5.4"
   },
   "dependencies": {
-    "@tauri-apps/api": "^2.0.0-alpha.12",
+    "@tauri-apps/api": "^2.0.0-rc",
     "tslib": "^2.1.0"
   }
 }
