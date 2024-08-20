@@ -6,7 +6,13 @@ A plugin for [Tauri](https://github.com/tauri-apps/tauri) that provides a polyfi
 
 It's built on top of [gilrs](https://crates.io/crates/gilrs) library.
 
-This plugin supports Tauri `2.x` beta. For v1 version check [v1 branch](https://github.com/eugenehp/tauri-plugin-gamepad/tree/v1)
+## Tauri versions support
+
+| Tauri version |  git  |
+|---------------|-------|
+| 1.x           | [0.0.2](https://github.com/DeveloperMindset-com/tauri-plugin-gamepad/tree/v1)    |
+| 2.0.0-beta    | [0.0.3](https://github.com/DeveloperMindset-com/tauri-plugin-gamepad/releases/tag/0.0.3) |
+| 2.0.0-rc      | [0.0.4](https://github.com/DeveloperMindset-com/tauri-plugin-gamepad/releases/tag/0.0.4) |
 
 ## Why
 
@@ -75,14 +81,6 @@ Make sure to include proper permissions to enable the plugin to share events wit
   ]
 }
 ```
-
-## Tauri versions support
-
-| Tauri version |  git  |
-|---------------|-------|
-| 1.x           | [0.0.2](https://github.com/DeveloperMindset-com/tauri-plugin-gamepad/tree/v1)    |
-| 2.0.0-beta    | [0.0.3](https://github.com/DeveloperMindset-com/tauri-plugin-gamepad/releases/tag/0.0.3) |
-| 2.0.0-rc      | [0.0.4](https://github.com/DeveloperMindset-com/tauri-plugin-gamepad/releases/tag/0.0.4) |
 
 ## Contributing
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
