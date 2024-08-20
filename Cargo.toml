@@ -12,6 +12,7 @@ repository = "https://github.com/DeveloperMindset-com/tauri-plugin-gamepad"
 readme = "README.md"
 keywords = ["polyfill", "gamepad", "gilrs", "tauri", "joystick"]
 categories = ["api-bindings", "web-programming", "simulation", "os", "game-development"]
+links = "tauri-plugin-gamepad"
 
 [dependencies]
 tauri = { version = "2.0.0-rc" }
