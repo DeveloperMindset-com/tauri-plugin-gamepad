@@ -69,7 +69,6 @@ fn gamepad_to_json(gamepad: Gamepad, event: EventType, time: SystemTime) -> Valu
 
 #[command]
 async fn execute<R: Runtime>(app: AppHandle<R>, _window: Window<R>) {
-    println!("execute");
     let mut gilrs = Gilrs::new().unwrap();
 
     loop {
@@ -83,6 +82,7 @@ async fn execute<R: Runtime>(app: AppHandle<R>, _window: Window<R>) {
 
 /// Initializes the plugin.
 pub fn init<R: Runtime>() -> TauriPlugin<R> {
+
     Builder::new("gamepad")
         .invoke_handler(tauri::generate_handler![execute])
         .build()

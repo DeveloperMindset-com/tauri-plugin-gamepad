@@ -58,6 +58,24 @@ cd examples/tauri-app
 npm run tauri dev
 ```
 
+## Permissions
+
+Make sure to include proper permissions to enable the plugin to share events with the webpage.
+
+```json
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capability for the main window",
+  "windows": ["main"],
+  "permissions": [
+    "core:app:default",
+    "core:event:allow-listen",
+    "gamepad:default"
+  ]
+}
+```
+
 ## Contributing
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
 
