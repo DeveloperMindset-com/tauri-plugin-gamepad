@@ -13,6 +13,7 @@ It's built on top of [gilrs](https://crates.io/crates/gilrs) library.
 | 1.x           | [0.0.2](https://github.com/DeveloperMindset-com/tauri-plugin-gamepad/tree/v1)    |
 | 2.0.0-beta    | [0.0.3](https://github.com/DeveloperMindset-com/tauri-plugin-gamepad/releases/tag/0.0.3) |
 | 2.0.0-rc      | [0.0.4](https://github.com/DeveloperMindset-com/tauri-plugin-gamepad/releases/tag/0.0.4) |
+| 2.0.x         | [0.0.5](https://github.com/DeveloperMindset-com/tauri-plugin-gamepad/releases/tag/0.0.5) |
 
 ## Why
 

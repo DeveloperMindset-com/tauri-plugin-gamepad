@@ -5,6 +5,8 @@ import { nodeResolve } from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
 import terser from "@rollup/plugin-terser";
 
+const OUTPUT_DIR = "dist-js";
+
 /**
  * Create a base rollup config
  *
@@ -36,24 +38,30 @@ export function createConfig(options = {}) {
   //   .replace("-", (x) => "_")
   //   .toUpperCase()}__`;
 
-  return [
+  const declarationDir = `./${pkg.exports.import.split("/")[0]}`;
+
+  /** @type {import('rollup').RollupOptions} */
+  const config = [
     {
       input,
       output: [
         {
           file: pkg.exports.import,
           format: "esm",
+          // dir: OUTPUT_DIR
         },
         {
           file: pkg.exports.require,
           format: "cjs",
+          // dir: OUTPUT_DIR
         },
       ],
       plugins: [
         typescript({
           declaration: true,
-          declarationDir: `./${pkg.exports.import.split("/")[0]}`,
-        }),
+          emitDeclarationOnly: true,
+          outDir: OUTPUT_DIR
+        })
       ],
       external: [
         ...external,
@@ -88,6 +96,8 @@ export function createConfig(options = {}) {
       ? additionalConfigs
       : [additionalConfigs]),
   ];
+
+  return config;
 }
 
 export default createConfig();

@@ -295,25 +295,19 @@
       "type": "string",
       "oneOf": [
         {
-          "description": "allow-execute -> Enables the execute command without any pre-configured scope.",
+          "description": "Enables the execute command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-execute"
-          ]
+          "const": "allow-execute"
         },
         {
-          "description": "deny-execute -> Denies the execute command without any pre-configured scope.",
+          "description": "Denies the execute command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-execute"
-          ]
+          "const": "deny-execute"
         },
         {
-          "description": "default -> This permission set configures which\ngampead features are by default exposed.\n\n#### Granted Permissions\n\nIt allows acccess to all gamepads.\n\n",
+          "description": "This permission set configures which\ngampead features are by default exposed.\n\n#### Granted Permissions\n\nIt allows acccess to all gamepads.\n\n",
           "type": "string",
-          "enum": [
-            "default"
-          ]
+          "const": "default"
         }
       ]
     }

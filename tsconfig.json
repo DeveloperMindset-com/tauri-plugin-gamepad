@@ -8,9 +8,9 @@
     "noUnusedLocals": true,
     "noImplicitAny": true,
     "noEmit": true,
-    "declaration": true,
-    "declarationDir": "../dist-js",
-    "rootDir": "./"
+    // "declaration": true,
+    // "declarationDir": "../dist-js",
+    "rootDir": "./guest-js"
   },
   "include": ["guest-js/*.ts"],
   "exclude": ["./rollup.config.js", "dist-js", "node_modules", "test/types"]

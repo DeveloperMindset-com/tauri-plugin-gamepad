@@ -11,7 +11,7 @@ It allows acccess to all gamepads.
 
 - `allow-execute`
 
-## Permission Table 
+## Permission Table
 
 <table>
 <tr>

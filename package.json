@@ -1,6 +1,6 @@
 {
   "name": "tauri-plugin-gamepad-api",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Eugene Hauptmann",
   "homepage": "https://developermindset.com/tauri-plugin-gamepad/",
   "repository": {"url": "https://github.com/eugenehp/tauri-plugin-gamepad"},
@@ -37,14 +37,14 @@
     "pretest": "npm run build"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "15.2.3",
-    "@rollup/plugin-typescript": "11.1.6",
+    "@rollup/plugin-node-resolve": "15.3.0",
+    "@rollup/plugin-typescript": "12.1.1",
     "rollup": "^4.21.0",
     "@rollup/plugin-terser": "0.4.4",
-    "typescript": "5.5.4"
+    "typescript": "5.7.2"
   },
   "dependencies": {
-    "@tauri-apps/api": "^2.0.0-rc",
+    "@tauri-apps/api": "2.1.1",
     "tslib": "^2.1.0"
   }
 }
