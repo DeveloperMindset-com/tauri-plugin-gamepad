@@ -89,4 +89,4 @@ When contributing to this repository, please first discuss the change you wish t
 ## License
 [MIT](./LICENSE)
 
-Copyright (c) 2023-2024 Eugene Hauptmann
+Copyright (c) 2023-2026 Eugene Hauptmann
