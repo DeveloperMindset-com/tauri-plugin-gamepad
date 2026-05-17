@@ -85,3 +85,11 @@ export const execute = async (cb: Callback) => {
 
   return unlisten;
 };
+
+export const setLogging = (enabled: boolean): Promise<void> => {
+  return invoke("plugin:gamepad|set_logging", { enabled });
+};
+
+export const getLogging = (): Promise<boolean> => {
+  return invoke("plugin:gamepad|get_logging");
+};

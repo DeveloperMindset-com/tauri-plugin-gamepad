@@ -61,5 +61,11 @@ const execute = async (cb) => {
     callback = cb;
     return unlisten;
 };
+const setLogging = (enabled) => {
+    return invoke("plugin:gamepad|set_logging", { enabled });
+};
+const getLogging = () => {
+    return invoke("plugin:gamepad|get_logging");
+};
 
-export { execute, getGamepads };
+export { execute, getGamepads, getLogging, setLogging };

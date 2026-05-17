@@ -1,9 +1,13 @@
-use tauri::{Emitter, EventTarget};
+use tauri::{Emitter, EventTarget, Manager};
 
 use gilrs::{Event, EventType, Gamepad, Gilrs, MappingSource};
 
 use serde_json::{json, Value};
 
+use std::sync::{
+    atomic::{AtomicBool, Ordering},
+    Arc,
+};
 use std::time::{SystemTime, UNIX_EPOCH};
 use std::u16;
 
@@ -16,7 +20,23 @@ use tauri::{
 mod utils;
 use crate::utils::{axis_from_u16, button_from_u16};
 
-fn gamepad_to_json(gamepad: Gamepad, event: EventType, time: SystemTime) -> Value {
+/// Shared plugin state. Consuming apps can read/write the logging flag directly:
+/// `app.state::<GamepadState>().set_logging(true);`
+pub struct GamepadState {
+    logging: Arc<AtomicBool>,
+}
+
+impl GamepadState {
+    pub fn is_logging(&self) -> bool {
+        self.logging.load(Ordering::Relaxed)
+    }
+
+    pub fn set_logging(&self, enabled: bool) {
+        self.logging.store(enabled, Ordering::Relaxed);
+    }
+}
+
+fn gamepad_to_json(gamepad: Gamepad, event: EventType, time: SystemTime, log: bool) -> Value {
     // TODO: pull from the device itself
     let num_of_axes: u16 = 12;
     let num_of_buttons: u16 = 20;
@@ -25,10 +45,10 @@ fn gamepad_to_json(gamepad: Gamepad, event: EventType, time: SystemTime) -> Valu
     let timestamp = time.duration_since(UNIX_EPOCH).unwrap().as_millis();
     let name = gamepad.name();
     let connected = gamepad.is_connected();
-    
+
     // TODO: not supported in gilrs yet, but works in sdl2
     let vibration = gamepad.is_ff_supported();
-    
+
     let uuid = uuid::Uuid::from_bytes(gamepad.uuid())
         .as_hyphenated()
         .to_string();
@@ -68,28 +88,48 @@ fn gamepad_to_json(gamepad: Gamepad, event: EventType, time: SystemTime) -> Valu
         "power_info": format!("{:?}",power_info),
     });
 
-    println!("{}", serde_json::to_string_pretty(&json).unwrap());
+    if log {
+        println!("{}", serde_json::to_string_pretty(&json).unwrap());
+    }
 
     json
 }
 
 #[command]
 async fn execute<R: Runtime>(app: AppHandle<R>, _window: Window<R>) {
+    let logging = app.state::<GamepadState>().logging.clone();
     let mut gilrs = Gilrs::new().unwrap();
 
     loop {
         while let Some(Event { id, event, time, .. }) = gilrs.next_event() {
             let gamepad = gilrs.gamepad(id);
-            let payload = gamepad_to_json(gamepad, event, time);
+            let payload = gamepad_to_json(gamepad, event, time, logging.load(Ordering::Relaxed));
             app.emit_to(EventTarget::any(), "event", payload).unwrap();
         }
     }
 }
 
-/// Initializes the plugin.
+#[command]
+fn set_logging(state: tauri::State<'_, GamepadState>, enabled: bool) {
+    state.set_logging(enabled);
+}
+
+#[command]
+fn get_logging(state: tauri::State<'_, GamepadState>) -> bool {
+    state.is_logging()
+}
+
+/// Initializes the plugin. Logging is off by default.
 pub fn init<R: Runtime>() -> TauriPlugin<R> {
+    let state = GamepadState {
+        logging: Arc::new(AtomicBool::new(false)),
+    };
 
     Builder::new("gamepad")
-        .invoke_handler(tauri::generate_handler![execute])
+        .setup(|app, _| {
+            app.manage(state);
+            Ok(())
+        })
+        .invoke_handler(tauri::generate_handler![execute, set_logging, get_logging])
         .build()
 }
