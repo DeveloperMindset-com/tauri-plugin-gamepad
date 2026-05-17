@@ -1,15 +1,17 @@
 ## Default Permission
 
 This permission set configures which
-gampead features are by default exposed.
+gamepad features are by default exposed.
 
 #### Granted Permissions
 
-It allows acccess to all gamepads.
+It allows access to all gamepads.
 
 #### This default permission set includes the following:
 
 - `allow-execute`
+- `allow-get-logging`
+- `allow-set-logging`
 
 ## Permission Table
 

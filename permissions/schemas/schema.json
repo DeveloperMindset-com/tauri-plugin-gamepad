@@ -331,10 +331,10 @@
           "markdownDescription": "Denies the set_logging command without any pre-configured scope."
         },
         {
-          "description": "This permission set configures which\ngampead features are by default exposed.\n\n#### Granted Permissions\n\nIt allows acccess to all gamepads.\n\n\n#### This default permission set includes:\n\n- `allow-execute`",
+          "description": "This permission set configures which\ngamepad features are by default exposed.\n\n#### Granted Permissions\n\nIt allows access to all gamepads.\n\n\n#### This default permission set includes:\n\n- `allow-execute`\n- `allow-get-logging`\n- `allow-set-logging`",
           "type": "string",
           "const": "default",
-          "markdownDescription": "This permission set configures which\ngampead features are by default exposed.\n\n#### Granted Permissions\n\nIt allows acccess to all gamepads.\n\n\n#### This default permission set includes:\n\n- `allow-execute`"
+          "markdownDescription": "This permission set configures which\ngamepad features are by default exposed.\n\n#### Granted Permissions\n\nIt allows access to all gamepads.\n\n\n#### This default permission set includes:\n\n- `allow-execute`\n- `allow-get-logging`\n- `allow-set-logging`"
         }
       ]
     }
