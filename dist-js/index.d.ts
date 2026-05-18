@@ -15,4 +15,6 @@ type UnlistenFn = () => void;
 type Callback = (response: PluginEvent) => void;
 export declare const getGamepads: () => Gamepad[] | null[];
 export declare const execute: (cb: Callback) => Promise<UnlistenFn>;
+export declare const setLogging: (enabled: boolean) => Promise<void>;
+export declare const getLogging: () => Promise<boolean>;
 export {};

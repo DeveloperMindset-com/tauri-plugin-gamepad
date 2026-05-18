@@ -1,4 +1,4 @@
-const COMMANDS: &[&str] = &["execute"];
+const COMMANDS: &[&str] = &["execute", "set_logging", "get_logging"];
 
 fn main() {
     let result = tauri_plugin::Builder::new(COMMANDS)

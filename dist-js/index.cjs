@@ -63,6 +63,14 @@ const execute = async (cb) => {
     callback = cb;
     return unlisten;
 };
+const setLogging = (enabled) => {
+    return core.invoke("plugin:gamepad|set_logging", { enabled });
+};
+const getLogging = () => {
+    return core.invoke("plugin:gamepad|get_logging");
+};
 
 exports.execute = execute;
 exports.getGamepads = getGamepads;
+exports.getLogging = getLogging;
+exports.setLogging = setLogging;
