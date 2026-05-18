@@ -1,9 +1,11 @@
 {
   "name": "tauri-plugin-gamepad-api",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Eugene Hauptmann",
   "homepage": "https://developermindset.com/tauri-plugin-gamepad/",
-  "repository": {"url": "https://github.com/eugenehp/tauri-plugin-gamepad"},
+  "repository": {
+    "url": "git+https://github.com/eugenehp/tauri-plugin-gamepad.git"
+  },
   "description": "A plugin for Tauri that provides a polyfill for Gamepad Web API that works on most common platforms.",
   "browser": "webview-dist/index.js",
   "type": "module",

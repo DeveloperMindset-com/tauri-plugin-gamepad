@@ -1,6 +1,6 @@
 [package]
 name = "tauri-plugin-gamepad"
-version = "0.0.5"
+version = "0.0.6"
 authors = [ "Eugene Hauptmann" ]
 description = "A plugin for Tauri that provides a polyfill for Gamepad Web API that works on most common platforms."
 edition = "2021"
